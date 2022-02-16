@@ -1,0 +1,182 @@
+.banneer {
+  width: 100%;
+  height: 700px;
+  background: url("https://images.unsplash.com/photo-1562568580-4069f5f8845e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80")
+    no-repeat;
+  background-color: rgba(255, 0, 0, 0.05);
+  background-size: cover;
+  margin-top: -5px;
+}
+
+
+header{
+    background-color:  #003580;
+}
+
+.contenido {
+  max-width: 1180px;
+  display: flex;
+  height: 600px;
+  margin: 0 auto;
+
+  justify-content: start;
+}
+
+.contenido h2 {
+  color: white;
+  align-items: flex-end;
+  display: flex;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+figure {
+  margin: 0;
+  display: flex;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.container {
+  column-count: 5;
+  column-gap: 10px;
+}
+
+.container {
+  column-count:3;
+  column-gap: 10px;
+ 
+}
+
+
+.positioned {
+  grid-column: box-start / box-end;
+  border: 5px solid white;
+}
+
+.Contact {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1100px;
+  height: 50vh;
+  margin: 0 auto;
+  margin: 0 auto;
+}
+
+.Contact img {
+  width: 34px;
+  height: 34px;
+  gap: 1rem;
+}
+
+.Contact span {
+  font-size: 1rem;
+  gap: 1rem;
+  text-align: justify;
+}
+
+.Contact .btn-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 236px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.Contact p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.callin {
+  display: grid;
+  gap: 2rem;
+}
+.Contact .callin .icon img {
+  width: 34px;
+  height: 34px;
+  gap: qrem;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 360px) {
+  .contenido h2 {
+    color: white;
+    align-items: flex-end;
+    display: flex;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  section h3 {
+    font-size: 1.5rem;
+  }
+
+  .Contact {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    height: 50vh;
+    margin: 10px;
+  }
+
+  .Contact img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Contact span {
+    font-size: 0.8rem;
+
+    text-align: center;
+  }
+
+  .Contact .btn-btn {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+    width: 150px;
+    height: 36px;
+    border-radius: 3px;
+  }
+
+  .Contact p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .callin {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 5px;
+  }
+  .Contact .callin .icon img {
+    width: 34px;
+    height: 34px;
+    gap: 0.5rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Contact .info h2 {
+    font-size: 1.3rem;
+  }
+
+  .Contact .info {
+    margin-left: 5px;
+  }
+}
