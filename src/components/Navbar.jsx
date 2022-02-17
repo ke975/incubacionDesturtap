@@ -1,7 +1,7 @@
 
 import {AuthContext} from '../context/autContext'
 import { useContext } from 'react'
-
+import {Link} from 'react-router-dom'
 
 export function Navbar(){
 
@@ -13,7 +13,7 @@ return(
 <>
 
 <nav className="navbar navbar-expand-lg container navbar-light">
-  <a className="navbar-brand text-white" href="#">Navbar</a>
+  <Link  className="navbar-brand text-white" to="#">Navbar</Link >
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -21,24 +21,24 @@ return(
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav ml-auto">
       <li className="nav-item active ">
-        <a className="nav-link text-white" href="#">Home <span className="sr-only">(current)</span></a>
+        <Link  className="nav-link text-white" to="#">Home <span className="sr-only">(current)</span></Link >
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white" href="#">Link</a>
+        <Link  className="nav-link text-white" to="#">Link</Link >
       </li>
       <li className="nav-item dropdown">
-        <a className=" text-white nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <Link  className=" text-white nav-link dropdown-toggle text-white" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
-        </a>
+        </Link >
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a className="dropdown-item" href="#">Action</a>
-          <a className="dropdown-item" href="#">Another action</a>
+          <Link  className="dropdown-item" to="#">Action</Link >
+          <Link  className="dropdown-item" to="#">Another action</Link>
           <div className="dropdown-divider"></div>
-          <a className="dropdown-item" href="#">Something else here</a>
+          <Link  className="dropdown-item" to="#">Something else here</Link >
         </div>
       </li>
       <li className="nav-item">
-       <img src={user.avatar} className=" rounded-circle" alt=""/> <a className="nav-link disabled text-white " href="#"></a>
+       <img src={user.avatar} className=" rounded-circle" alt=""/> <Link  className="nav-link disabled text-white " to="#"></Link >
       </li>
     </ul>
     <form className="form-inline my-2 my-lg-0">

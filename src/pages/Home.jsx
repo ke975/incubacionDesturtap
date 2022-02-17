@@ -1,3 +1,6 @@
+import React from 'react'
+
+
 import { Navbar } from "../components/Navbar"
 import '../styles/banneer.scss'
 import {Contact} from '../components/Contact'
