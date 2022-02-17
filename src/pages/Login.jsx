@@ -155,7 +155,7 @@ export function Login() {
           </Modal>
 
           <form onSubmit={procesarDatos}>
-            {error ? <div className="alert  text-center col-sm-4">{error}</div> : null}
+            {error ? <div className="alert  text-center col-sm-4 col-md-12">{error}</div> : null}
 
             <input
               type="email"
