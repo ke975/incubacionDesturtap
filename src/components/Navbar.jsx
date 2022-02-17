@@ -1,7 +1,11 @@
 
+import {AuthContext} from '../context/autContext'
+import { useContext } from 'react'
+
+
 export function Navbar(){
 
-
+const {user} =useContext(AuthContext)
 
 
 
@@ -34,13 +38,14 @@ return(
         </div>
       </li>
       <li className="nav-item">
-        <a className="nav-link disabled text-white " href="#">Disabled</a>
+       <img src={user.avatar} className=" rounded-circle" alt=""/> <a className="nav-link disabled text-white " href="#"></a>
       </li>
     </ul>
     <form className="form-inline my-2 my-lg-0">
       <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
       <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    
   </div>
 </nav>
 

@@ -2,14 +2,14 @@ import React from "react";
 import "../styles/Login.scss";
 import Beach from "../assets/beachLandin.png";
 import Logo from "../assets/logo-paraTraveling-safe.gif";
-import Google from "../assets/google.png";
-import facebook from "../assets/facebooke.png";
+import Google from "../assets/search.png";
+import facebook from "../assets/face.png";
 import Modal from "react-modal";
 import { firebase } from "../services/firebase";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/autContext";
 import { useNavigate } from "react-router-dom";
-
+import '../styles/ResponsiveLogin.scss'
 Modal.setAppElement("#root");
 
 export function Login() {
@@ -19,10 +19,10 @@ export function Login() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const [emailCreate, setEmailCreate] = useState('')
-  const [passCreate, setPassCreate] = useState('')
-  const [error,setError] = useState(null)
-  const [errorModal,setErrorModal] = useState(null)
+  const [emailCreate, setEmailCreate] = useState("");
+  const [passCreate, setPassCreate] = useState("");
+  const [error, setError] = useState(null);
+  const [error1, setError1] = useState(null);
   function openModal() {
     setIsOpen(true);
   }
@@ -31,82 +31,72 @@ export function Login() {
     setIsOpen(false);
   }
 
-function handleCreateUser(e){
-  e.preventDefault()
-  firebase.auth().createUserWithEmailAndPassword(emailCreate, passCreate)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    closeModal()
-    // ...
-  })
-  .catch((error) => {
-    if(errorModal.code === 'auth/user-not-found'){
-      setErrorModal('Usuario o contraseña incorrecta')
- 
+  function handleCreateUser(e) {
+    e.preventDefault();
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(emailCreate, passCreate)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        closeModal();
+        // ...
+      })
+      .catch((error) => {
+        if (error.code === "auth/user-not-found") {
+          setError1("Usuario o contraseña incorrecta");
+        }
+        if (error.code === "auth/wrong-password") {
+          setError("Usuario o contraseña incorrecta");
+        }
+        console.log(error.code);
+        console.log(error.message);
 
+        if (!emailCreate.trim()) {
+          console.log("Datos vacíos email!");
+          setError("Datos vacíos email!");
+          return;
+        }
+        if (!passCreate.trim()) {
+          console.log("Datos vacíos email!");
+          setError("Datos vacíos contraseña!");
+          return;
+        }
+        // ..
+      });
   }
-  if(errorModal.code === 'auth/wrong-password'){
-      setError('Usuario o contraseña incorrecta')
+
+  function procesarDatos(e) {
+    e.preventDefault();
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, pass)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        // ...
+        navigate("/Home");
+      })
+      .catch((error) => {
+        if (error.code === "auth/wrong-password") {
+          setError("Usuario o contraseña incorrecta");
+        }
+        if (!email.trim()) {
+          console.log("Datos vacíos email!");
+          setError("Datos vacíos email!");
+          return;
+        }
+        if (!pass.trim()) {
+          console.log("Datos vacíos email!");
+          setError("Datos vacíos contraseña!");
+          return;
+        }
+      });
+
+    setEmailCreate("");
+    setPassCreate("");
   }
-  console.log(error.code)
-  console.log(error.message)
-
-  if(!email.trim()){
-    console.log('Datos vacíos email!')
-    setErrorModal('Datos vacíos email!')
-    return
-}
-if(!pass.trim()){
-  console.log('Datos vacíos email!')
-  setErrorModal('Datos vacíos contraseña!')
-  return
-}
-    // ..
-  });
-}
-
-function procesarDatos(e){
-  e.preventDefault()
-
-  
-
-  firebase.auth().signInWithEmailAndPassword(email,pass)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-    navigate('/Home')
-  })
-  .catch((error) => {
-    if(error.code === 'auth/wrong-password'){
-      setError('Usuario o contraseña incorrecta')
-  }
-  if(!email.trim()){
-    console.log('Datos vacíos email!')
-    setError('Datos vacíos email!')
-    return
-}
-if(!pass.trim()){
-  console.log('Datos vacíos email!')
-  setError('Datos vacíos contraseña!')
-  return
-}
-  });
-
-
-  
-  setEmailCreate('');
-  setPassCreate('');
-}
-
-
-
-
-
-
-
-
 
   async function Login() {
     if (!user) {
@@ -142,15 +132,11 @@ if(!pass.trim()){
             className="react-modal-content"
             overlayClassName="react-modal-overlay"
           >
-            <form onSubmit={ handleCreateUser}>
+            <form onSubmit={handleCreateUser}>
               <h1>Registraté</h1>
-              {
-        errorModal?(
-            <div className="alert alert-danger">
-                {error}
-            </div>
-        ):null
-    }
+              {error? (
+                <div className="alert alert-danger">{error}</div>
+              ) : null}
 
               <input
                 type="email"
@@ -162,20 +148,14 @@ if(!pass.trim()){
                 type="password"
                 value={passCreate}
                 placeholder="Ingrese su contraseña"
-                onChange={(e) =>setPassCreate(e.target.value)}
+                onChange={(e) => setPassCreate(e.target.value)}
               />
               <button>Registrase</button>
             </form>
           </Modal>
 
           <form onSubmit={procesarDatos}>
-          {
-        error?(
-            <div className="alert alert-danger">
-                {error}
-            </div>
-        ):null
-    }
+            {error ? <div className="alert  text-center col-sm-4">{error}</div> : null}
 
             <input
               type="email"
@@ -192,10 +172,11 @@ if(!pass.trim()){
               value={pass}
             />
 
-
-<button type="submit" className="btn btn-warning">Entrar</button>
+            <button type="submit" className="btn btn-warning">
+              Entrar
+            </button>
             <button onClick={Login}>
-              {" "}
+              
               <img src={Google} width={30} height={30} alt="" />
               Iniciar Session con Google
             </button>

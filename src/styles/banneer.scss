@@ -41,13 +41,10 @@ figure {
   break-inside: avoid;
 }
 
-.container {
-  column-count: 5;
-  column-gap: 10px;
-}
+
 
 .container {
-  column-count:3;
+  column-count:2;
   column-gap: 10px;
  
 }
@@ -72,7 +69,7 @@ figure {
 .Contact img {
   width: 34px;
   height: 34px;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 .Contact span {
@@ -103,11 +100,20 @@ figure {
 .Contact .callin .icon img {
   width: 34px;
   height: 34px;
-  gap: qrem;
-
-  align-items: center;
-  justify-content: center;
+  gap: 3rem;
+  margin-right: 2rem;
+  
 }
+
+.btn-btn img{ 
+margin-left: 1rem;
+}
+
+.btn-btn span{ 
+  margin-right: 1.2rem;
+  font-size: 1.5rem;
+  color: white;
+  }
 
 @media (max-width: 360px) {
   .contenido h2 {
