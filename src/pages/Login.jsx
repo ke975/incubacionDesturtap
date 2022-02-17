@@ -196,7 +196,7 @@ if(!pass.trim()){
 <button type="submit" className="btn btn-warning">Entrar</button>
             <button onClick={Login}>
               {" "}
-              <img src={Google} alt="Logo do google" width={30} height={30} />
+              <img src={Google} width={30} height={30} alt="" />
               Iniciar Session con Google
             </button>
             <button onClick={LoginFacebook}>
