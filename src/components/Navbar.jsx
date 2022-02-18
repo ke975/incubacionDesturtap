@@ -1,21 +1,21 @@
 
-import {AuthContext} from '../context/autContext'
-import { useContext } from 'react'
+import { useAuth } from "../context/autContext";
+
 import { useHistory } from "react-router-dom";
 import {Link} from 'react-router-dom'
 
 export function Navbar(){
-
-const {user,logout} =useContext(AuthContext)
-
 const history = useHistory();
+const { logout, user } = useAuth();
 
-async function handleLogout() {
+console.log(user);
+const handleLogout = async () => {
   try {
     await logout();
-    history.push("/");
-  } catch {}
-}
+  } catch (error) {
+    console.error(error.message);
+  }
+};
 
 return(
 <>
@@ -45,7 +45,7 @@ return(
         </div>
       </li>{
         user?(
-          <img src={user.avatar} alt="" />
+          <img src={user.photoURL} alt="" />
         ):(
           <Link className="dropdown-item" to="/login">Login</Link>
         )
