@@ -31,7 +31,7 @@ export function Login() {
     email: "",
     password: "",
   });
-  const { login, loginWithGoogle, resetPassword,signup  } = useAuth();
+  const { login, loginWithGoogle, resetPassword,signup} = useAuth();
   const [error, setError] = useState("");
 
 
@@ -46,13 +46,13 @@ export function Login() {
     }
   };
 
-
   const handleCreate = async (e) => {
     e.preventDefault();
     setError("");
     try {
       await signup(user.email, user.password);
       history.push("/");
+      closeModal()
     } catch (error) {
       setError(error.message);
     }
