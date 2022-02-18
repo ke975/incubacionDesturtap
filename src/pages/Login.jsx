@@ -8,12 +8,12 @@ import Modal from "react-modal";
 import { firebase } from "../services/firebase";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/autContext";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import '../styles/ResponsiveLogin.scss'
 Modal.setAppElement("#root");
 
 export function Login() {
-  const navigate = useNavigate();
+  const history = useHistory();
   const { sigInWithGoogle, user, sigInWithFacebook } = useContext(AuthContext);
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -76,7 +76,7 @@ export function Login() {
         // Signed in
         var user = userCredential.user;
         // ...
-        navigate("/Home");
+        history.push("/");
       })
       .catch((error) => {
         if (error.code === "auth/wrong-password") {
@@ -102,14 +102,14 @@ export function Login() {
     if (!user) {
       await sigInWithGoogle();
     }
-    navigate("/Home");
+    history.push("/");
   }
 
   async function LoginFacebook() {
     if (!user) {
       await sigInWithFacebook();
     }
-    navigate("/Home");
+    history.push("/home");
   }
 
   return (

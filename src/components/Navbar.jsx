@@ -12,42 +12,72 @@ const {user} =useContext(AuthContext)
 return(
 <>
 
-<nav className="navbar navbar-expand-lg container navbar-light">
-  <Link  className="navbar-brand text-white" to="#">Navbar</Link >
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
+{user ? (
+        <nav className="navbar navbar-expand-lg navbar-light  container-fluid col-xs-12 ">
+          <Link className="navbar-brand container   text-uppercase" to="#">
+          <h4 className="text-white">Traveling-Safe</h4>
+          </Link>
 
-  <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav ml-auto">
-      <li className="nav-item active ">
-        <Link  className="nav-link text-white" to="#">Home <span className="sr-only">(current)</span></Link >
-      </li>
-      <li className="nav-item">
-        <Link  className="nav-link text-white" to="#">Link</Link >
-      </li>
-      <li className="nav-item dropdown">
-        <Link  className=" text-white nav-link dropdown-toggle text-white" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </Link >
-        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <Link  className="dropdown-item" to="#">Action</Link >
-          <Link  className="dropdown-item" to="#">Another action</Link>
-          <div className="dropdown-divider"></div>
-          <Link  className="dropdown-item" to="#">Something else here</Link >
-        </div>
-      </li>
-      <li className="nav-item">
-       <img src={user.avatar} className=" rounded-circle" alt=""/> <Link  className="nav-link disabled text-white " to="#"></Link >
-      </li>
-    </ul>
-    <form className="form-inline my-2 my-lg-0">
-      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    
-  </div>
-</nav>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ml-auto col-xs-12">
+              <li className="nav-item active">
+                <Link className="nav-link  text-uppercase text-white" to="/places">
+                  <h5>Inicio</h5><span className="sr-only">(current)</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link  text-white text-uppercase" to="/Allplaces">
+                <h5>  Categorias  </h5>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link  text-white text-uppercase" to="#">
+                   <h5>     Promociones  </h5>
+                </Link>
+              </li>
+              <li className="nav-item">
+                {user ? (
+                  <Link
+                    className="nav-link text-success text-uppercase "
+                    to="#"
+                  >
+                    {" "}
+                    <img src={user.avatar} alt="" />
+                  </Link>
+                ) : (
+                  <Link className="nav-link disabled text-uppercase " to="#">
+                    haz Login
+                  </Link>
+                )}
+              </li>
+            </ul>
+            {user ? (
+              <button
+                className="btn btn-outline-danger w-25 my-sm-0"
+                type="submit"
+           
+              >
+                logout
+              </button>
+            ) : (
+              <span>usted no esta logeado</span>
+            )}
+          </div>
+        </nav>
+      ) : (
+        <h1>Por favor haga login para ver nuestra pagina</h1>
+      )}
 
 
 </>

@@ -24,7 +24,7 @@ export function Home(){
             <h3 className="text-center mt-5" > <strong> Lugares mas frequentados <br/> de<br/> Nicaragua </strong></h3>
         </section>
         
-        <div class="container mt-5">
+        <div class="container">
 	<figure>
 		<img src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
 	</figure>

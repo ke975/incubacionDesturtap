@@ -8,7 +8,7 @@ export const AuthContext = createContext({})
 export function AuthContextProvider(props){
 
 useEffect(()=>{
-    const unsubscribe = auth.onAuthStateChanged(user=>{
+     auth.onAuthStateChanged(user=>{
     if(user){
         const{displaName,photoURL,uid} = user;
 
@@ -24,9 +24,7 @@ useEffect(()=>{
     }
 
     })
-    return()=>{
-        unsubscribe()
-    }
+ 
 },[])
 
 const [user,setUser] = useState()
