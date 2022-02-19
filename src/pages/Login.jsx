@@ -171,7 +171,7 @@ export function Login() {
            
             <button onClick={handleResetPassword}>Olvide mi contraseña</button>
           </form>
-          <button className="Register mt-3" onClick={openModal}>
+          <button className="Register sm-col-4 mt-3" onClick={openModal}>
               Registrarse
             </button>
 

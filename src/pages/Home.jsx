@@ -13,7 +13,7 @@ export function Home(){
         </header>
         <div className="banneer">
         <div className='contenido container'>
-      <h2>¿Encuentra <br/>tu <br/> Proxima Aventura?<br/>
+      <h2>¿Encuentra tu  Proxima Aventura?
         
      </h2>
 
@@ -21,11 +21,11 @@ export function Home(){
      </div>
         </div>
         <section>
-            <h3 className="text-center mt-5" > <strong> Lugares mas frequentados <br/> de<br/> Nicaragua </strong></h3>
+            <h3 className="text-center mt-5" > <strong> Lugares mas frecuentados <br/> de<br/> Nicaragua </strong></h3>
         </section>
         
-        <div class="container">
-	<figure>
+        <div className="container">
+	<figure className='data-toggle="tooltip ' title="Tooltip on top"> 
 		<img src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
 	</figure>
 	<figure>
