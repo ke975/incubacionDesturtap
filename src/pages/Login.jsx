@@ -5,7 +5,7 @@ import Logo from "../assets/logo-paraTraveling-safe.gif";
 import Google from "../assets/search.png";
 
 import Modal from "react-modal";
-
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {  useState } from "react";
 import { useAuth } from "../context/autContext";
 import { useHistory } from "react-router-dom";
@@ -31,10 +31,11 @@ export function Login() {
     email: "",
     password: "",
   });
-  const { login, loginWithGoogle, resetPassword,signup} = useAuth();
+  const { login, loginWithGoogle, resetPassword,createUser} = useAuth();
   const [error, setError] = useState("");
-
-
+  const [emailCreate, setEmailCreate] = useState("")
+  const [passwordCreate, setPasswordCreate] = useState("")
+  const [errorModal,setErrorModal]=useState("")
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -46,17 +47,30 @@ export function Login() {
     }
   };
 
-  const handleCreate = async (e) => {
-    e.preventDefault();
-    setError("");
-    try {
-      await signup(user.email, user.password);
-      history.push("/");
-      closeModal()
-    } catch (error) {
-      setError(error.message);
-    }
-  };
+
+ const userCreate = async (e)=>{
+
+  e.preventDefault();
+
+  const auth = getAuth();
+  createUserWithEmailAndPassword(auth, emailCreate, passwordCreate)
+  try {
+       await createUser(emailCreate, passwordCreate);
+       closeModal()
+       
+       
+   } catch (error) {
+       setErrorModal(error.message);
+       }
+       setEmailCreate("")
+      setPasswordCreate("")
+ }
+
+  // const userCreate = async (e) => {
+  //   e.preventDefault();
+  //   setError("");
+  //   
+  // };
 
 
   const handleChange = ({ target: { value, name } }) =>
@@ -105,23 +119,23 @@ export function Login() {
             className="react-modal-content"
             overlayClassName="react-modal-overlay"
           >
-            <form onSubmit={handleCreate}>
+            <form onSubmit={userCreate}>
               <h1>Registraté</h1>
               {error? (
-                <div className="alert alert-danger">{error}</div>
+                <div className="alert alert-danger">{errorModal}</div>
               ) : null}
 
               <input
                 type="email"
-              
+                value={emailCreate}
                 placeholder="ingrese su email"
-                onChange={(e) => setUser({ ...user, password: e.target.value })}
-              />
+                onChange={(e) => setEmailCreate(e.target.value)}
+/>
               <input
                 type="password"
-        
+                  value={passwordCreate}
                 placeholder="Ingrese su contraseña"
-                onChange={(e) => setUser({ ...user, password: e.target.value })}
+                onChange={(e) => setPasswordCreate(e.target.value)}
               />
               <button>Registrase</button>
             </form>
@@ -154,10 +168,13 @@ export function Login() {
               Iniciar Session con Google
             </button>
            
-            <button className="Register" onClick={openModal}>
+           
+            <button onClick={handleResetPassword}>Olvide mi contraseña</button>
+          </form>
+          <button className="Register mt-3" onClick={openModal}>
               Registrarse
             </button>
-          </form>
+
         </div>
       </main>
     </div>
