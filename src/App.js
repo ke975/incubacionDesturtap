@@ -1,9 +1,9 @@
 
-
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import { AuthProvider } from './context/autContext';
 import {Login} from './pages/Login'
 import {Home} from'./pages/Home'
+import {Places} from './pages/places'
 function App() {
   return (
     <BrowserRouter>
@@ -11,6 +11,7 @@ function App() {
     <Switch>
       <Route path="/" exact component={Home}/>
       <Route path="/Login" component={Login}/>
+      <Route path="/places" component={Places}/>
     </Switch>
     </AuthProvider>
   </BrowserRouter>
