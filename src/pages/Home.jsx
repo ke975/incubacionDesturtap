@@ -25,8 +25,8 @@ export function Home(){
         </section>
         
         <div className="container">
-	<figure className='data-toggle="tooltip ' title="Tooltip on top"> 
-		<img src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
+	<figure > 
+		<img className='data-toggle="tooltip ' title="Tooltip on top" src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
 	</figure>
 	<figure>
 		<img src="https://assets.codepen.io/12005/suspension-bridge.jpg" alt="The Clifton Suspension Bridge" />

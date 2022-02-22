@@ -1,10 +1,8 @@
 import { useAuth } from "../context/autContext";
-
-import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export function Navbar() {
-  const history = useHistory();
+
   const { logout, user } = useAuth();
 
   console.log(user);
@@ -31,13 +29,13 @@ export function Navbar() {
 
   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div className="navbar-nav ml-auto">
-      <Link className="nav-link active text-white" to="#">Lugares <span className="sr-only">(current)</span></Link>
+      <Link className="nav-link active text-white" to="/places">Lugares <span className="sr-only">(current)</span></Link>
       <Link className="nav-link text-white" to="#">Categorias</Link>
 
       {user ? (
         <>
        
-        <img src={user.photoURL} className="rounded-circle m-2 " style={{width:"30px",height:"30px"}} alt="" />
+        <img src={user.photoURL} className="rounded-circle m-2 " style={{width:"30px",height:"30px"}} alt="foto avatar del usuario" />
         <Link className="nav-link text-white" onClick={handleLogout}>logout</Link>
         </>
       ):(
