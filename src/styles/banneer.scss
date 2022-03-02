@@ -1,7 +1,7 @@
 .banneer {
   width: 100%;
-  height: 700px;
-  background: url("https://images.unsplash.com/photo-1562568580-4069f5f8845e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80")
+  height: 500px;
+  background: url("https://images.unsplash.com/photo-1451956632809-303a9f8c92d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1088&q=80")
     no-repeat;
   background-color: rgba(255, 0, 0, 0.05);
   background-size: cover;
@@ -16,7 +16,7 @@ header{
 .contenido {
   max-width: 1180px;
   display: flex;
-  height: 600px;
+  height: 800px;
   margin: 0 auto;
 
   justify-content: start;
@@ -24,9 +24,10 @@ header{
 
 .contenido h2 {
   color: white;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   text-align: center;
+
 }
 
 img {
@@ -44,7 +45,7 @@ figure {
 
 
 .container {
-  column-count:2;
+  column-count:3;
   column-gap: 10px;
  
 }

@@ -26,19 +26,23 @@ export function Home(){
         
         <div className="container">
 	<figure > 
-		<img className='data-toggle="tooltip ' title="Tooltip on top" src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
+		
+		<img className='data-toggle="tooltip ' title="Tooltip on top" src="https://lugaresturisticos365.com/wp-content/uploads/San-Juan-del-Sur.jpg" alt="A windmill" />
+	</figure>
+	<p className="text-center">5Estrellas</p>
+	<figure>
+		
+		<img src="https://www.adonde-y-cuando.es/site/images/illustration/matagalpa.jpg" alt="The Clifton Suspension Bridge" />
+		
 	</figure>
 	<figure>
-		<img src="https://assets.codepen.io/12005/suspension-bridge.jpg" alt="The Clifton Suspension Bridge" />
+		<img src="https://lugaresturisticos365.com/wp-content/uploads/Reserva-Natural-Volcan-Mombacho.jpg" alt="Sunset and boats" />
 	</figure>
 	<figure>
-		<img src="https://assets.codepen.io/12005/sunset.jpg" alt="Sunset and boats" />
+		<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/20/05/05/dc/magnific-rock-surf-resort.jpg?w=900&h=-1&s=1" alt="a river in the snow" />
 	</figure>
 	<figure>
-		<img src="https://assets.codepen.io/12005/snowy.jpg" alt="a river in the snow" />
-	</figure>
-	<figure>
-		<img src="https://assets.codepen.io/12005/bristol-balloons1.jpg" alt="a single checked balloon" />
+		<img src="https://img.directhotels.com/ni/managua/barcelo-montelimar-beach-managua/1.jpg" alt="a single checked balloon" />
 	</figure>
 	<figure>
 		<img src="https://assets.codepen.io/12005/dog-balloon.jpg" alt="a hot air balloon shaped like a dog" />
