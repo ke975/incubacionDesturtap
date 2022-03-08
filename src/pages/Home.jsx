@@ -29,7 +29,7 @@ export function Home(){
 		
 		<img className='data-toggle="tooltip ' title="Tooltip on top" src="https://lugaresturisticos365.com/wp-content/uploads/San-Juan-del-Sur.jpg" alt="A windmill" />
 	</figure>
-	<p className="text-center">5Estrellas</p>
+
 	<figure>
 		
 		<img src="https://www.adonde-y-cuando.es/site/images/illustration/matagalpa.jpg" alt="The Clifton Suspension Bridge" />
