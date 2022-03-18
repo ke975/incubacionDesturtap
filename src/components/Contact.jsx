@@ -11,8 +11,8 @@ export function Contact(){
   </p>
 
   <button className='btn-btn btn-warning'>
-  <img src="https://cdn-icons-png.flaticon.com/128/2111/2111728.png" alt="" />
-  <span>whatsapp</span>
+  <a href="https://api.whatsapp.com/send?1=es&phone=58549438">Whatsapp</a>
+
   </button>
 </div>
 
