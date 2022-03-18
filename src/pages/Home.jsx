@@ -17,7 +17,7 @@ export function Home() {
         </div>
       </div>
 
-      <Touroperator />
+      
 
       <section>
         <h3 className="text-center mt-5">
@@ -84,7 +84,7 @@ export function Home() {
           </figure>
         </a>
       </div>
-
+      <Touroperator />
       <Contact />
 
       <Footer />
