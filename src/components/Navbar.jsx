@@ -1,6 +1,6 @@
 import { useAuth } from "../context/autContext";
 import { Link } from "react-router-dom";
-
+import {IoLogOutOutline} from 'react-icons/io5'
 export function Navbar() {
 
   const { logout, user } = useAuth();
@@ -35,8 +35,20 @@ export function Navbar() {
       {user ? (
         <>
        
-        <img src={user.photoURL} className="rounded-circle m-2 " style={{width:"30px",height:"30px"}} alt="foto avatar del usuario" />
-        <Link className="nav-link text-white" onClick={handleLogout}>logout</Link>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+        <img src={user.photoURL} className="rounded-circle  " style={{width:"30px",height:"30px"}} alt="foto avatar del usuario" />
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <Link className="nav-link text-center text-black ml-2" onClick={handleLogout}><IoLogOutOutline
+        size={"24px"}
+      style={{margin:"5px"}}
+      color={"red"}        />
+        Logout</Link>
+        </div>
+      </li>
+        
+        
         </>
       ):(
         <Link className="nav-link text-white" to="/Login">login</Link>

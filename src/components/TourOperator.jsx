@@ -31,6 +31,7 @@ export function Touroperator(){
                 
              </div>
             </div>
+            <hr className="mt-3 dashed contenedor"/>
         </div>
     )
 }

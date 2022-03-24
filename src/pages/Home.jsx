@@ -5,6 +5,8 @@ import "../styles/banneer.scss";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/footer";
 import { Touroperator } from "../components/TourOperator";
+import { IoStarHalfOutline } from "react-icons/io5";
+import { Divider } from "../components/divider";
 export function Home() {
   return (
     <div>
@@ -17,19 +19,18 @@ export function Home() {
         </div>
       </div>
 
-      
-
       <section>
-        <h3 className="text-center mt-5">
+        <h2 className="text-center mt-5">
           {" "}
           <strong>
             {" "}
             Lugares mas frecuentados <br /> de
             <br /> Nicaragua{" "}
           </strong>
-        </h3>
+        </h2>
       </section>
-
+      <Divider/>
+     
       <div className="container mt-3">
         <a href="">
           <figure>
@@ -41,15 +42,41 @@ export function Home() {
             />
           </figure>
         </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          possimus laboriosam voluptatibus sed. Cum nihil fugiat id quaerat,
+          cupiditate dolores corrupti, soluta quidem quam modi incidunt
+          laboriosam tempora maiores magnam!{" "}
+          <span>
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+          </span>
+        </p>
 
         <a href="">
           <figure>
             <img
+              className='data-toggle="tooltip '
               src="https://www.adonde-y-cuando.es/site/images/illustration/matagalpa.jpg"
               alt="The Clifton Suspension Bridge"
+              title="Ciudad de Matagalpa"
             />
           </figure>
         </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          possimus laboriosam voluptatibus sed. Cum nihil fugiat id quaerat,
+          cupiditate dolores corrupti, soluta quidem quam modi incidunt
+          laboriosam tempora maiores magnam!{" "}
+          <span>
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+          </span>
+        </p>
         <a href="">
           <figure>
             <img
@@ -58,6 +85,18 @@ export function Home() {
             />
           </figure>
         </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          possimus laboriosam voluptatibus sed. Cum nihil fugiat id quaerat,
+          cupiditate dolores corrupti, soluta quidem quam modi incidunt
+          laboriosam tempora maiores magnam!{" "}
+          <span>
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+          </span>
+        </p>
         <a href="">
           <figure>
             <img
@@ -66,6 +105,18 @@ export function Home() {
             />
           </figure>
         </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          possimus laboriosam voluptatibus sed. Cum nihil fugiat id quaerat,
+          cupiditate dolores corrupti, soluta quidem quam modi incidunt
+          laboriosam tempora maiores magnam!{" "}
+          <span>
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+          </span>
+        </p>
         <a href="">
           <figure>
             <img
@@ -74,8 +125,20 @@ export function Home() {
             />
           </figure>
         </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          possimus laboriosam voluptatibus sed. Cum nihil fugiat id quaerat,
+          cupiditate dolores corrupti, soluta quidem quam modi incidunt
+          laboriosam tempora maiores magnam!{" "}
+          <span>
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+          </span>
+        </p>
 
-		<a href="">
+        <a href="">
           <figure>
             <img
               src="https://img.directhotels.com/ni/managua/barcelo-montelimar-beach-managua/1.jpg"
@@ -83,7 +146,20 @@ export function Home() {
             />
           </figure>
         </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          possimus laboriosam voluptatibus sed. Cum nihil fugiat id quaerat,
+          cupiditate dolores corrupti, soluta quidem quam modi incidunt
+          laboriosam tempora maiores magnam!{" "}
+          <span>
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+          </span>
+        </p>
       </div>
+      <Divider/>
       <Touroperator />
       <Contact />
 

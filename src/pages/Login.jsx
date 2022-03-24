@@ -3,13 +3,13 @@ import "../styles/Login.scss";
 import Beach from "../assets/beachLandin.png";
 import Logo from "../assets/logo-paraTraveling-safe.gif";
 import Google from "../assets/search.png";
-
 import Modal from "react-modal";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { useAuth } from "../context/autContext";
 import { useHistory } from "react-router-dom";
 import "../styles/ResponsiveLogin.scss";
+
 Modal.setAppElement("#root");
 
 export function Login() {
@@ -34,6 +34,7 @@ export function Login() {
   const [emailCreate, setEmailCreate] = useState("");
   const [passwordCreate, setPasswordCreate] = useState("");
   const [errorModal, setErrorModal] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -53,8 +54,8 @@ export function Login() {
     try {
       await createUser(emailCreate, passwordCreate);
       closeModal();
-    } catch (error) {
-      setErrorModal(error.message);
+    } catch (errorModal) {
+      setErrorModal(errorModal.message);
     }
     setEmailCreate("");
     setPasswordCreate("");
