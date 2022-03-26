@@ -5,6 +5,7 @@ import { Footer } from "../components/footer";
 import { Card } from "../components/Card";
 import {IoWine} from 'react-icons/io5'
 import {Divider} from '../components/divider'
+import { Carroussel } from "../components/carrousell";
 export function Places() {
   return (
     <div>
@@ -12,11 +13,9 @@ export function Places() {
         <Navbar />
       </header>
 
-      <div className="banneer">
-        <div className="contenido container">
-          <h2>¿Encuentra tu Proxima Aventura?</h2>
-        </div>
-      </div>
+    <div>
+    <Carroussel/>
+    </div>
 
       <section className="contenedor">
         <h2 className="ml-5 mt-5">Diversion al maximo con nustros paquetes Turisiticos.</h2>

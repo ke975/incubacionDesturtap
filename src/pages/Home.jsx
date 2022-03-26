@@ -1,22 +1,21 @@
 import React from "react";
 
 import { Navbar } from "../components/Navbar";
-import "../styles/banneer.scss";
+
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/footer";
 import { Touroperator } from "../components/TourOperator";
 import { IoStarHalfOutline } from "react-icons/io5";
 import { Divider } from "../components/divider";
+import {Carroussel} from "../components/carrousell";
 export function Home() {
   return (
     <div>
       <header>
         <Navbar />
       </header>
-      <div className="banneer">
-        <div className="contenido container">
-          <h2>¿Encuentra tu Proxima Aventura?</h2>
-        </div>
+      <div>
+      <Carroussel/>
       </div>
 
       <section>
