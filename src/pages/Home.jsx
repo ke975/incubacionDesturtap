@@ -51,8 +51,10 @@ export function Home() {
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <button className="btn btn bg-primary text-white m-3"> Reserva ahora</button>
           </span>
         </p>
+        
 
         <a href="">
           <figure>
@@ -74,6 +76,7 @@ export function Home() {
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <button className="btn btn bg-primary text-white m-3"> Reserva ahora</button>
           </span>
         </p>
         <a href="">
@@ -94,6 +97,7 @@ export function Home() {
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <button className="btn btn bg-primary text-white m-3"> Reserva ahora</button>
           </span>
         </p>
         <a href="">
@@ -114,6 +118,7 @@ export function Home() {
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <button className="btn btn bg-primary text-white m-3"> Reserva ahora</button>
           </span>
         </p>
         <a href="">
@@ -134,6 +139,7 @@ export function Home() {
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <button className="btn btn bg-primary text-white m-3"> Reserva ahora</button>
           </span>
         </p>
 
@@ -155,6 +161,7 @@ export function Home() {
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
             <IoStarHalfOutline size={"2.5rem"} color={"#ffd800"} />
+            <button className="btn btn bg-primary text-white m-3"> Reserva ahora</button>
           </span>
         </p>
       </div>

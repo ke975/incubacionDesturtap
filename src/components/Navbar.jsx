@@ -30,16 +30,17 @@ export function Navbar() {
   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div className="navbar-nav ml-auto">
       <Link className="nav-link active text-white" to="/places">Lugares <span className="sr-only">(current)</span></Link>
-      <Link className="nav-link text-white" to="#">Categorias</Link>
+      <Link className="nav-link text-white nav-link dropdown-toggle" to="#">Categorias</Link>
 
       {user ? (
         <>
        
-       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+       <li className="nav-item dropdown">
+        <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
         <img src={user.photoURL} className="rounded-circle  " style={{width:"30px",height:"30px"}} alt="foto avatar del usuario" />
+        {user.displayName}
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
         <Link className="nav-link text-center text-black ml-2" onClick={handleLogout}><IoLogOutOutline
         size={"24px"}
       style={{margin:"5px"}}

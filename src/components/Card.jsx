@@ -1,6 +1,7 @@
 import "../styles/contenedor.scss";
 import { Link } from "react-router-dom";
 import { Divider } from "./divider";
+import { IoStarHalfOutline } from "react-icons/io5";
 export function Card() {
   return (
     <div>
@@ -20,9 +21,18 @@ export function Card() {
                 que ofrece un ambiente para familias además de numerosos
                 servicios diseñados para mejorar su estancia.
               </p>
-              <Link to="#" className="btn btn-primary">
+              <Link to="/Reservation" className="btn btn-primary m-1">
                 Contactanos
               </Link>
+              <span>
+              
+            <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+            <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+          
+          </span>
+          
             </div>
           </div>
 
@@ -40,9 +50,18 @@ export function Card() {
                 vegetación tropical desde donde se puede disfrutar de los
                 mejores atardeceres del Pacífico.
               </p>
-              <Link to="#" className="btn btn-primary">
+              
+              <Link to="/Reservation" className="btn btn-primary ml-2">
                 Contactanos
               </Link>
+              <span>
+              
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+            
+            </span>
             </div>
           </div>
 
@@ -61,9 +80,17 @@ export function Card() {
                 playa Popoyo y al océano Pacífico está a 12 minutos a pie de la
                 playa Santana y a 11 km del aeropuerto Costa Esmeralda.
               </p>
-              <Link to="#" className="btn btn-primary">
+              <Link to="/Reservation" className="btn btn-primary ml-2">
                 Contactanos
               </Link>
+              <span>
+              
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+            
+            </span>
             </div>
           </div>
         </div>
@@ -87,9 +114,17 @@ export function Card() {
                 envuelto en una boscosa vegetación, donde conviven diferentes
                 especies de animales: mamíferos, reptiles, anfibios y aves.
               </p>
-              <Link to="#" className="btn btn-primary">
+              <Link to="/Reservation" className="btn btn-primary ml-2">
                 Contactanos
               </Link>
+              <span>
+              
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+            
+            </span>
             </div>
           </div>
           <div className="card m-3 col-xs-12" style={{ width: "20rem" }}>
@@ -106,9 +141,17 @@ export function Card() {
                 salir y visitar cualquiera de sus bares, tomar unos tragos y
                 disfrutar de buena música
               </p>
-              <Link to="#" className="btn btn-primary">
+              <Link to="/Reservation" className="btn btn-primary ml-2">
                 Contactanos
               </Link>
+              <span>
+              
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+            
+            </span>
             </div>
           </div>
           <div className="card m-2 col-xs-12 " style={{ width: "20rem" }}>
@@ -125,9 +168,17 @@ export function Card() {
                 igual. Acá te podrás olvidar del bullicio de la ciudad y
                 conectarte con la naturaleza.
               </p>
-              <Link to="#" className="btn btn-primary">
+              <Link to="/Reservation" className="btn btn-primary ml-2">
                 Contactanos
               </Link>
+              <span>
+              
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
+            
+            </span>
             </div>
           </div>
         </div>
